@@ -11,4 +11,6 @@ A website that offers fitness training services.
 https://grey-whitt.github.io/run-buddy/
 
 ## Contribution
-Made with ❤️ by Grey
+Made with ❤️ by [your name]
+
+### ©️2019 Run Buddy, Inc 
