@@ -22,9 +22,9 @@ header {
 
 header h1 {
     font-weight: bold;
+    margin: 0;
     font-size: 36px;
-    color: #fce138;
-    margin: 0;   
+    color: #fce138;   
 }
     
 header a {
@@ -260,8 +260,7 @@ section {
     font-size: 17px;
 }
 
-.contact {
-    text-align: center;
+.contact {   
     background: #024e76;
 }
 
@@ -302,6 +301,7 @@ section {
 
 .contact-info a {
     color: #fce138;
+    
 }
 
 .contact-form input, .contact-form textarea {
