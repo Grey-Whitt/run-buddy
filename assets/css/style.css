@@ -337,36 +337,56 @@ section {
     display: flex;
 }
 
+/* Service styles start */
+
+.services {
+    background: #fce138; 
+}
+  
+.service-grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .service-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    grid-gap: 10px;
-    max-width: 940px;
-    margin: 0 auto;
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-rows: repeat(5, 1fr) 2fr;
+    background-color: lightyellow;
+    width: 80%;
+    border: 2px solid #024e76;
+    font-size: 18px;
 }
 
 .service-grid-item {
-    background-color: orange;
-    border: solid;
-    color: black;
+    padding: 15px 0;
+    border: 2px solid #024e76;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.box1 {
-   grid-column: 1/2;
-   grid-row: 1/3;
+/* specific match */
+.service-grid-item.basic {
+    grid-column: 2 / span 1;
 }
 
-.box2 {
-    grid-column: 3/4;
-    grid-row: 1/-1;
+.both {
+    grid-column: 2 / span 2;
 }
 
-.box3 {
-    grid-column: 2/ span 2;
-    grid-row: 3/ span 1;
+.service-grid-item.cancel {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-row: 1 / -1;
 }
 
+.grid-head, .grid-price, .service-grid-item.cance {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 /* for smaller desktops and smaller */
 @media screen and (max-width: 980px) {
@@ -449,6 +469,27 @@ section {
     .step-text {
         flex: 100%;
     }
+
+    .service-grid-container {
+        grid-template-columns: 1fr 1fr; /*By setting the value of grid-template-columns to 1fr 1fr, we created two equal columns for this grid.  */
+    }
+
+    .service-grid-item.basic {
+        grid-column: 1; /*  set the "basic" plan to the first column */
+    }
+
+    .service-grid-item.both {
+        grid-column: 1 / -1;  /* reposition the spanning row to start at column one */
+    }
+
+    .service-grid-item.cancel { /* turned off font manipulation and moved the grid item and transformed it in to a row */
+        transform: none;
+        writing-mode: unset;
+        grid-column: 1 / -1;
+        grid-row: -1;
+    }
+    /* The grid-column: 1 / -1; declaration spanned both rows starting at the first column. The grid-row: -1; declaration positioned this grid item on the last row.
+     In this rule, we also set the transform property to none and the writing-mode property to unset to negate the styles that vertically transform this font. */
 }
 
 /* for mobile phones and smaller */
