@@ -281,7 +281,7 @@ section {
 }
 
 .step:not(:last-child) {
-    border-bottom: 1px solidvar(--tertiary-color) ;
+    border-bottom: 1px solid var(--tertiary-color) ;
 }
 
 .steps {
@@ -532,6 +532,7 @@ section {
     width: 80%;
     border: 2px solid var(--secondary-color);
     font-size: 18px;
+    color: var(--secondary-color);
 }
 
 .service-grid-item {
@@ -558,7 +559,7 @@ section {
     grid-row: 1 / -1;
 }
 
-.grid-head, .grid-price, .service-grid-item.cance {
+.grid-head, .grid-price, .service-grid-item.cancel {
     font-size: 1.5rem;
     font-weight: bold;
 }
