@@ -7,7 +7,6 @@ This project was one of the first ones I completed at the UT coding bootcamp and
 
 - [Repository](#repository)
 - [Examples](#examples)
-- [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Questions](#questions)
 - [Contributions](#contributing)
@@ -27,12 +26,72 @@ This project was one of the first ones I completed at the UT coding bootcamp and
 
 ---
 
+Here is a section of the site and the css behind it.
+![Run buddy](./assets/images/services.png)
+
+
+I used flex and grid to arrange the layout
+```
+/* Service styles start */
+
+.services {
+    background: var(--primary-color); 
+}
+  
+.service-grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.service-grid-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-rows: repeat(5, 1fr) 2fr;
+    background-color: lightyellow;
+    width: 80%;
+    border: 2px solid var(--secondary-color);
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+.service-grid-item {
+    padding: 15px 0;
+    border: 2px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* specific match */
+.service-grid-item.basic {
+    grid-column: 2 / span 1;
+}
+
+.both {
+    grid-column: 2 / span 2;
+}
+
+.service-grid-item.cancel {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-row: 1 / -1;
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+```
+
 
 ## Technologies Used
 
 ---
 
-HTML
+HTML  
 CSS
 
 
